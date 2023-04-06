@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int shift(int n) 
+{
+    if(n<8)return n;
+    else return n%8+10*(shift(n/8));
+}
+int main() 
+{
+    int n;
+    cin>>n;
+    cout<<shift(n)<<endl;
+    return 0;
+}
+
