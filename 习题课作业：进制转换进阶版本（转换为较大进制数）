@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+string t = "0123456789ABCDEF";
+class Solution{
+public:
+	void solution(int N,int R){
+		int x;
+		string s;
+		while(N!=0){
+			x=N%R;
+			s=t[x]+s;
+			N/=R;
+		}
+		if(s=="")
+			cout<<0<<endl;
+		else
+			cout<<s<<endl;
+	}
+};
+int main()
+{
+	int m,N,R;
+	cin>>m;
+	for(int i=0;i<m;i++){
+		cin>>N>>R;
+		Solution s;
+		s.solution(N,R);
+	}
+	return 0;
+}
