@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+double pi=3.14;
+class Circle{
+public:
+	double m_r,m_R,m_C,m_S;
+	double getR(){
+		m_R=m_r*2;
+	}
+	double getC(){
+		m_C=2*pi*m_r;
+	}
+	double getS(){
+		m_S=pi*m_r*m_r;
+	}
+};
+int main()
+{
+	Circle c;
+	double r;
+	cin>>r;
+	c.m_r=r;
+	cout<<"直径"<<c.getR() <<endl;
+	cout<<"周长:"<<c.getC() <<endl;
+	cout<<"面积:"<<c.getS() <<endl;
+	return 0;
+}
