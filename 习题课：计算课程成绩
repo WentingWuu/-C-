@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+class Stu {
+public:
+	stu()
+	{
+		cin>>num;
+		grade();
+		show();
+	}
+	void grade()
+	{
+		for (int i = 0; i < num; i++)
+		{
+			cin >> name[i];
+			cin >> u_grade[i] >> f_grade[i];
+			s_grade[i] = u_grade[i] * 0.4 + f_grade[i] * 0.6;
+		}
+	}
+	void show()
+	{
+		for (int i = 0; i < num; i++)
+		{
+			cout << name[i] << " " << u_grade[i] << " " << f_grade[i] << " " << s_grade[i] << endl;
+		}
+	}
+	
+private:
+	int num;
+	string name[100];
+	float u_grade[100], f_grade[100];
+	float s_grade[100];
+};
+int main()
+{
+	stu s;
+}
